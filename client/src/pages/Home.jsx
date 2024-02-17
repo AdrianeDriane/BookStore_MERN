@@ -8,18 +8,18 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    setLoading(true);
+    setIsLoading(true);
     axios
       .get('http://localhost:8080/books')
       .then((res) => {
         setBooks(res.data.data);
-        setLoading(false);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
