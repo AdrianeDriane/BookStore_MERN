@@ -21,7 +21,7 @@ const ShowBook = () => {
         console.log(err);
         setIsLoading(false);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="p-4">
