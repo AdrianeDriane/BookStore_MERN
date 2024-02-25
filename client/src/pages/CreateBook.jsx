@@ -5,11 +5,11 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const CreateBook = () => {
-  const [title, setTitle] = useState();
-  const [author, setAuthor] = useState();
-  const [publishYear, setPublishYear] = useState();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [publishYear, setPublishYear] = useState('');
 
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
